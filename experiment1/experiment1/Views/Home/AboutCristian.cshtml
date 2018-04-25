@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "AboutCristian";
+}
+
+<link href="~/css/About.css" type="text/css" rel="stylesheet">
+
+<center>
+
+    <h2> Name: </h2>
+    <p>Cristian<br /></p>
+    <h2>Date of Birth:</h2>
+    <p>xxxx <br /></p>
+    <h2>Place of Birth: </h2>
+    <p>xxxx </p>
+    <p id="originalC"> </p>
+    <br /><br /><br />
+    <p><a asp-area="" asp-controller="Home" asp-action="GalleryCristian">Gallery     | </a><a asp-area="" asp-controller="Home" asp-action="AdminCristian"> Edit Changes      | </a><a asp-area="" asp-controller="Home" asp-action="NewsletterMindaugas"> Newsletter </a></p>
+
+</center>
+
+
+<script>
+
+    localStorage.getItem('ChangesC')
+    document.getElementById("originalC").innerHTML = localStorage.getItem('ChangesC')
+
+</script>

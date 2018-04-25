@@ -1,0 +1,158 @@
+﻿@{
+    ViewData["Title"] = "Gallery";
+}
+
+<!--Basically a list of photos, that serve as thumbnail>
+<!--Trigger, open modal-->
+<div class="gallery">
+    <img src="images/pic1.jpg" onclick="openModal();currentSlide(1)">
+    <img src="images/pic2.jpg" onclick="openModal();currentSlide(2)">
+    <img src="images/pic3.jpg" onclick="openModal();currentSlide(3)">
+    <img src="images/pic4.jpg" onclick="openModal();currentSlide(4)">
+    <img src="images/pic5.jpg" onclick="openModal();currentSlide(5)">
+    <img src="images/pic6.jpg" onclick="openModal();currentSlide(6)">
+    <img src="images/pic7.jpg" onclick="openModal();currentSlide(7)">
+    <img src="images/pic8.jpg" onclick="openModal();currentSlide(8)">
+    <img src="images/pic9.jpg" onclick="openModal();currentSlide(9)">
+    <img src="images/pic10.jpg" onclick="openModal();currentSlide(10)">
+</div>
+
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+        <div class="mySlides">
+            <div class="numbertext">1 / 10</div>
+            <img src="images/pic1.jpg" style="width:100%" class="modalimage">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">2 / 10</div>
+            <img src="images/pic2.jpg" style="width:100%" class="modalimage">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">3 / 10</div>
+            <img src="images/pic3.jpg" style="width:100%" class="modalimage">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">4 / 10</div>
+            <img src="images/pic4.jpg" style="width:100%" class="modalimage">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">5 / 10</div>
+            <img src="images/pic5.jpg" style="width:100%" class="modalimage">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">6 / 10</div>
+            <img src="images/pic6.jpg" style="width:100%" class="modalimage">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">7 / 10</div>
+            <img src="images/pic7.jpg" style="width:100%" class="modalimage">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">8 / 10</div>
+            <img src="images/pic8.jpg" style="width:100%" class="modalimage">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">9 / 10</div>
+            <img src="images/pic9.jpg" style="width:100%" class="modalimage">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">10 / 10</div>
+            <img src="images/pic10.jpg" style="width:100%" class="modalimage">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+    </div>
+
+    <div class="liteGallery">
+
+        <div class="liteGalleryItem">
+            <img class="demo cursor" src="images/pic1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Description 1">
+        </div>
+        <div class="liteGalleryItem">
+            <img class="demo cursor" src="images/pic2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Description 2">
+        </div>
+        <div class="liteGalleryItem">
+            <img class="demo cursor" src="images/pic3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Description 3">
+        </div>
+        <div class="liteGalleryItem">
+            <img class="demo cursor" src="images/pic4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Description 4">
+        </div>
+        <div class="liteGalleryItem">
+            <img class="demo cursor" src="images/pic5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Description 5">
+        </div>
+        <div class="liteGalleryItem">
+            <img class="demo cursor" src="images/pic6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Description 6">
+        </div>
+        <div class="liteGalleryItem">
+            <img class="demo cursor" src="images/pic7.jpg" style="width:100%" onclick="currentSlide(7)" alt="Description 7">
+        </div>
+        <div class="liteGalleryItem">
+            <img class="demo cursor" src="images/pic8.jpg" style="width:100%" onclick="currentSlide(8)" alt="Description 8">
+        </div>
+        <div class="liteGalleryItem">
+            <img class="demo cursor" src="images/pic9.jpg" style="width:100%" onclick="currentSlide(9)" alt="Description 9">
+        </div>
+        <div class="liteGalleryItem">
+            <img class="demo cursor" src="images/pic10.jpg" style="width:100%" onclick="currentSlide(10)" alt="Description 10">
+        </div>
+
+    </div>
+</div>
+
+
+
+<script>
+            function openModal() {
+            document.getElementById('myModal').style.display = "block";
+            }
+
+            function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+            }
+
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("liteGalleryItem");
+                var captionText = document.getElementById("caption");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+</script>

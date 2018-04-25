@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+    /*background-color: decide on the color;*/
+}
+
+#navbar {
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#navbar li {
+    width: 175px;
+    height: 50px;
+    margin: 10px auto;
+    display: block;
+    list-style-type: none; /* No indications before the items */
+}
+
+#navbar li a {
+    text-decoration: none; /* remove lines form under the items */
+}
