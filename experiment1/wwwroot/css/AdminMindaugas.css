@@ -1,0 +1,21 @@
+body {
+    font-family: sans-serif;
+    /*background-color: decide on the color;*/
+}
+
+#buttons {
+    display: flex;
+    width: 150px;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+#textAndButton {
+    display: none;
+}
+
+#galleryAndButton {
+    display: none;
+}
+

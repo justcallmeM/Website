@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Admin";
+}
+
+<!--Body on load check edits-->
+<link href="~/css/AdminMindaugas.css" type="text/css" rel="stylesheet">
+
+<div>
+    <center>
+
+        <div id="buttons">
+
+            <button onclick="hidetextFunction()">Manage text</button>
+            <button onclick="hidegalleryFunction()">Manage gallery</button>
+
+        </div>
+
+        <div id="textAndButton">
+
+            <p>An example, which is editable</p>
+            <p id="aboutJ" contenteditable="true">About me text, which should be edited and saved in ADMIN, and then opened in about me page</p>
+            <input value="save edits" type="button" onclick="saveEditsJ()" />
+
+        </div>
+
+        <div id="galleryAndButton">
+
+            <p>upload photos to the gallery</p>
+
+        </div>
+
+    </center>
+
+    <script>
+
+            function hidetextFunction() {
+                var x = document.getElementById("textAndButton");
+
+                if (localStorage.getItem('ChangesJ') !== null) {
+
+                    document.getElementById("aboutJ").innerHTML = localStorage.getItem('ChangesJ');
+                    
+                } 
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+            }
+
+            function hidegalleryFunction() {
+                var x = document.getElementById("galleryAndButton");
+
+                if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+
+                
+            }
+
+    </script>
+
+
+</div>
+

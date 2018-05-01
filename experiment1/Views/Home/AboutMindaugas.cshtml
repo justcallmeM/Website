@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+
+<link href="~/css/About.css" type="text/css" rel="stylesheet">
+
+<center>
+    <p></p>
+    <h2> Name: </h2>
+    <p>Midaugas Pikelis<br /></p>
+    <h2>Date of Birth:</h2>
+    <p>23rd July, 1996 <br /></p>
+    <h2>Place of Birth: </h2>
+    <p>Panevezys, Lithuania </p>
+    <p id="originalM"></p>
+    <br /><br /><br />
+    <p><a asp-area="" asp-controller="Home" asp-action="GalleryMindaugas">Gallery     | </a><a asp-area="" asp-controller="Home" asp-action="AdminMindaugas"> Edit Changes      | </a><a asp-area="" asp-controller="Home" asp-action="NewsletterMindaugas"> Newsletter </a></p>
+</center>
+
+
+<script>
+
+    localStorage.getItem('ChangesM')
+    document.getElementById("originalM").innerHTML = localStorage.getItem('ChangesM')
+
+</script>

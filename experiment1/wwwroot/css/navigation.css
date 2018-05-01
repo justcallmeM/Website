@@ -1,0 +1,10 @@
+.navpictures {
+    display: block;
+    margin-left: 450px;
+    margin-right: auto;
+}
+
+img {
+    height: 50%;
+    width: 50%;
+}
