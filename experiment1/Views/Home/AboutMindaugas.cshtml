@@ -1,4 +1,5 @@
-﻿@{
+﻿@model EFGetStarted.AspNetCore.NewDb.Models.PersonalInformation
+@{
     ViewData["Title"] = "About";
 }
 
@@ -7,20 +8,16 @@
 <center>
     <p></p>
     <h2> Name: </h2>
-    <p>Midaugas Pikelis<br /></p>
+    <p>@Model.Name<br /></p>
     <h2>Date of Birth:</h2>
-    <p>23rd July, 1996 <br /></p>
+    <p>@Model.DateOfBirth <br /></p>
     <h2>Place of Birth: </h2>
-    <p>Panevezys, Lithuania </p>
-    <p id="originalM"></p>
-    <br /><br /><br />
-    <p><a asp-area="" asp-controller="Home" asp-action="GalleryMindaugas">Gallery     | </a><a asp-area="" asp-controller="Home" asp-action="AdminMindaugas"> Edit Changes      | </a><a asp-area="" asp-controller="Home" asp-action="NewsletterMindaugas"> Newsletter </a></p>
+    <p>@Model.PlaceOfBirth </p>
+    <h2>About:</h2>
+    <p>@Model.About  </p>
+
+    <br />
+    <br />
+    <br />
+    <p><a asp-area="" asp-controller="Home" asp-action="GalleryMindaugas">Gallery     | </a><a asp-area="" asp-controller="Blogs" asp-action="Index"> Admin      | </a><a asp-area="" asp-controller="Home" asp-action="Newsletter"> Newsletter </a></p>
 </center>
-
-
-<script>
-
-    localStorage.getItem('ChangesM')
-    document.getElementById("originalM").innerHTML = localStorage.getItem('ChangesM')
-
-</script>

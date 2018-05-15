@@ -11,15 +11,27 @@
   <ItemGroup>
     <Content Remove="Views\Home\Index1.cshtml" />
     <Content Remove="Views\Index.cshtml" />
+    <Content Remove="wwwroot\css\AdminM.css" />
+    <Content Remove="wwwroot\css\AdminMindaugas.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="dbo.Table.sql" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.2" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
 </Project>

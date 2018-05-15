@@ -7,20 +7,16 @@
 <center>
     <p></p>
     <h2> Name: </h2>
-    <p>Johanna Brosig<br /></p>
+    <p>@Model.Name<br /></p>
     <h2>Date of Birth:</h2>
-    <p>20th July, 1995 <br /></p>
+    <p>@Model.DateOfBirth <br /></p>
     <h2>Place of Birth: </h2>
-    <p>Wismar, Germany </p>
-    <p id="originalJ"></p>
-    <br /><br /><br />
-    <p><a asp-area="" asp-controller="Home" asp-action="GalleryJohanna">Gallery     | </a><a asp-area="" asp-controller="Home" asp-action="AdminJohanna"> Edit Changes      | </a><a asp-area="" asp-controller="Home" asp-action="NewsletterMindaugas"> Newsletter </a></p>
+    <p>@Model.PlaceOfBirth </p>
+    <h2>About:</h2>
+    <p>@Model.About  </p>
+
+    <br />
+    <br />
+    <br />
+    <p><a asp-area="" asp-controller="Home" asp-action="GalleryJohanna">Gallery     | </a><a asp-area="" asp-controller="Blogs" asp-action="Index"> Admin      | </a><a asp-area="" asp-controller="Home" asp-action="Newsletter"> Newsletter </a></p>
 </center>
-
-
-<script>
-
-    localStorage.getItem('ChangesJ')
-    document.getElementById("originalJ").innerHTML = localStorage.getItem('ChangesJ')
-
-</script>
